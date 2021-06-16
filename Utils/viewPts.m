@@ -68,7 +68,7 @@ if isfield(pts,'pos')
         ptStr = pts(i).str;
         
         if ~isempty(ctr)
-            ptPos = points_on_line(ptPos0, ctr, -lift/100);
+            ptPos = av.points_on_line(ptPos0, ctr, -lift/100);
         else
             ptPos = ptPos0;
         end
@@ -96,7 +96,7 @@ else
     pts0 = [pts(:,axes_order(1)) pts(:,axes_order(2)) pts(:,axes_order(3))];
     for i = 1:size(pts,1)
         if ~isempty(ctr)
-            pts(i,:) = points_on_line(pts0(i,:),ctr,-lift/100);
+            pts(i,:) = av.points_on_line(pts0(i,:),ctr,-lift/100);
         else
             pts(i,:) = pts0(i,:);
         end

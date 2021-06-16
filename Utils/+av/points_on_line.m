@@ -3,7 +3,7 @@ function p3 = points_on_line(p1, p2, crop, mode, gridsize)
 %
 % USAGE:
 %   
-%    p3 = points_on_line(p1,p2,crop,mode)
+%    p3 = av.points_on_line(p1,p2,crop,mode)
 %
 % DESCRIPTION:
 %   

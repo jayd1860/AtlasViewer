@@ -7,12 +7,12 @@ h = waitbar(0,'Installation Progress ...');
 main();
 
 % Check that everything was installed properly
-r = finishInstallGUI();
+r = av.finishInstallGUI();
 
 waitbar(nSteps/nSteps, h);
 close(h);
 
-cleanup();
+av.cleanup();
 
 
 
@@ -31,7 +31,7 @@ if ismac()
 else
 	dirnameSrc = [pwd, '/'];
 end
-dirnameDst = getAppDir('isdeployed');
+dirnameDst = av.getAppDir('isdeployed');
 
 % Uninstall
 try
@@ -49,9 +49,9 @@ catch ME
     rethrow(ME)
 end
 
-platform = setplatformparams();
+platform = av.setplatformparams();
 
-v = getVernum();
+v = av.getVernum();
 fprintf('==============================================\n');
 fprintf('Setup script for AtlasViewer v%s.%s.%s:\n', v{1}, v{2}, v{3});
 fprintf('==============================================\n\n');

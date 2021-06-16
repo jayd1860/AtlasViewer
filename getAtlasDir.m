@@ -18,7 +18,7 @@ if isempty(dirname) | ~exist(dirname,'file')
     % Set the components of the default atlas dir pathname
     % <dirnameApp>/<dirnameRootAtlases>/<defaultAtlases{ii}>
     % for both executable and matlab IDE
-    dirnameApp = getAppDir();
+    dirnameApp = av.getAppDir();
     if isdeployed()
         dirnameRootAtlases = '';
     else

@@ -71,9 +71,9 @@ if strcmp(mode,'redraw')
     c = [c(:,axes_order2(1)), c(:,axes_order2(2)), c(:,axes_order2(3))];
     c = [c(:,axes_order(1)), c(:,axes_order(2)), c(:,axes_order(3))];
 
-    l1 = points_on_line(rpa, lpa, 1/100, 'all');
-    l2 = points_on_line(nz, iz, 1/100, 'all');
-    l3 = points_on_line(cz, czo, 1/100, 'all');
+    l1 = av.points_on_line(rpa, lpa, 1/100, 'all');
+    l2 = av.points_on_line(nz, iz, 1/100, 'all');
+    l3 = av.points_on_line(cz, czo, 1/100, 'all');
     
     hl1 = plot3(l1(:,axes_order(1)), l1(:,axes_order(2)), l1(:,axes_order(3)), 'color',c(1,:));
     hl2 = plot3(l2(:,axes_order(1)), l2(:,axes_order(2)), l2(:,axes_order(3)), 'color',c(2,:));

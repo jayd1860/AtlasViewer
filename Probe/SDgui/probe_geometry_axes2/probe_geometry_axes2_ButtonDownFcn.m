@@ -86,8 +86,8 @@ if ~isempty(pos2) && ~isempty(pos1)
         
         pos1_0 = pos1;
         pos2_0 = pos2;
-        pts(1,:) = points_on_line(pos2, pos1);
-        pts(2,:) = points_on_line(pos1, pos2);
+        pts(1,:) = av.points_on_line(pos2, pos1);
+        pts(2,:) = av.points_on_line(pos1, pos2);
         userdata.xdata = [pos2(1) pos1(1)];
         userdata.ydata = [pos2(2) pos1(2)];
         userdata.zdata = [pos2(3) pos1(3)];

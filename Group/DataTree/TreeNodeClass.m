@@ -771,7 +771,7 @@ classdef TreeNodeClass < handle
             src = obj.procStream.output.SetFilename(obj.GetOutputFilename('legacy'));
             dst = obj.procStream.output.SetFilename(obj.GetOutputFilename());
             if ispathvalid(src)
-                if ~pathscompare(src, dst)
+                if ~av.pathscompare(src, dst)
                     obj.logger.Write(sprintf('Moving %s to %s\n', src, dst));
                     movefile(src, dst);
                 end

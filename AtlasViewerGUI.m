@@ -244,8 +244,8 @@ dirnameSubj = atlasViewer.dirnameSubj;
 % is to generate from the discarded the head volume or head surface
 % with on-the-fly generated head surface or head volume respectively
 if ~headvol.isempty(headvol) && ~headsurf.isempty(headsurf)
-    if ~pathscompare(headvol.pathname, headsurf.pathname)
-        if pathscompare(headvol.pathname, dirnameSubj)
+    if ~av.pathscompare(headvol.pathname, headsurf.pathname)
+        if av.pathscompare(headvol.pathname, dirnameSubj)
             
             % Generate headsurf and pialsurf from headvol
             headsurf = headvol2headsurf(headvol);
@@ -260,7 +260,7 @@ if ~headvol.isempty(headvol) && ~headsurf.isempty(headsurf)
             headsurf = setHeadsurfHandles(headsurf, handles);
             pialsurf = setPialsurfHandles(pialsurf, handles);
             
-        elseif pathscompare(headsurf.pathname, dirnameSubj)
+        elseif av.pathscompare(headsurf.pathname, dirnameSubj)
             
             headvol = initHeadvol();    % Discard head volume
             
@@ -275,7 +275,7 @@ end
 % If the head surface and pial surface don't agree on anatomy, then
 % keep the head surface no matter where it comes from subject or atlas folder
 if ~headsurf.isempty(headsurf)  && ~pialsurf.isempty(pialsurf)
-    if ~pathscompare(headsurf.pathname, pialsurf.pathname)
+    if ~av.pathscompare(headsurf.pathname, pialsurf.pathname)
 
         pialsurf = initPialsurf();
             
@@ -387,7 +387,7 @@ atlasViewer.dirnameSubj = getSubjDir(varargin);
 atlasViewer.dirnameAtlas = getAtlasDir(varargin);
 
 fprintf('%s\n', banner());
-fprintf('   dirnameApp = %s\n', getAppDir());
+fprintf('   dirnameApp = %s\n', av.getAppDir());
 fprintf('   dirnameAtlas = %s\n', atlasViewer.dirnameAtlas);
 fprintf('   dirnameSubj = %s\n', atlasViewer.dirnameSubj);
 

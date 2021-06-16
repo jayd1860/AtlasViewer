@@ -75,9 +75,9 @@ if ~options.add
     options.conflcheck = false;
 end
 
-[paths, wspaths, paths_excl_str] = getpaths(options);
+[paths, wspaths, paths_excl_str] = av.getpaths(options);
 % if ~isempty(wspaths)
-%     if pathscompare(wspaths{1}, pwd)
+%     if av.pathscompare(wspaths{1}, pwd)
 %         fprintf('Current workspace %s already at the top of the search path.\n', wspaths{1});
 %         addwspaths(wspaths, paths_excl_str, options);
 %         return;
@@ -212,8 +212,8 @@ if length(wspaths)>1
     end
 end
 
-if exist([pwd, '/Utils/setpaths_proprietary.m'],'file')
-    setpaths_proprietary(options);
+if exist([pwd, '/Utils/+av/setpaths_proprietary.m'],'file')
+    av.setpaths_proprietary(options);
 end
 
 

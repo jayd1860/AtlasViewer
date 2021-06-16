@@ -127,7 +127,7 @@ currElemName = datatreegui.dataTree.currElem.GetName;
 % Function to determine if we need to load a new subject in datatreegui.
 % That is, if there is a folder corresponding to the selected fNIRS data 
 % then AtlasViever will change the subject context
-if pathscompare([groupDir, currElemName], atlasViewer.dirnameSubj)
+if av.pathscompare([groupDir, currElemName], atlasViewer.dirnameSubj)
     return;
 end
 dirnameSubjNew = filesepStandard([groupDir, currElemName]);
@@ -141,7 +141,7 @@ if ~ispathvalid(dirnameSubjNew, 'dir')
         return;
     end
 end
-if pathscompare(dirnameSubjNew, atlasViewer.dirnameSubj)
+if av.pathscompare(dirnameSubjNew, atlasViewer.dirnameSubj)
     % We end up here IF selected data does NOT correspond to a separate subject
     % folder, it means that a separate anatomy is not associated with this data,
     % so then do NOT reload datatreegui

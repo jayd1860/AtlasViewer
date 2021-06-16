@@ -1,6 +1,6 @@
 function userfuncdir = FindUserFuncDir(obj)
 userfuncdir = {};
-dirnameApp = getAppDir();
+dirnameApp = av.getAppDir();
 
 if ~ispathvalid([dirnameApp, 'FuncRegistry/UserFunctions/'])
     return;

@@ -87,12 +87,12 @@ stats.err = 0;
 stats.handles.this = hObject;
 stats.handles.msgFinished = handles.textFinished;
 stats.handles.msgMoreInfo = handles.textMoreInfo;
-stats.dirnameApp = getAppDir('isdeployed');
+stats.dirnameApp = av.getAppDir('isdeployed');
 stats.pushbuttonOKPress = false;
 
 fprintf('FinishInstallGUI_OpeningFcn: dirnameApp = %s\n', stats.dirnameApp);
 
-platform = setplatformparams();
+platform = av.setplatformparams();
 
 %%%%%%%%%%%%%%%%% 
 % Error checks

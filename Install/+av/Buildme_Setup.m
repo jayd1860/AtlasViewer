@@ -6,5 +6,5 @@ end
 if exist(dirnameInstall,'dir')
     cd(dirnameInstall);
 end
-Buildme('setup');
+Buildme('av.setup');
 cd(currdir);

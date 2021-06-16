@@ -1,7 +1,7 @@
 function setGuiFonts(h, varargin)
 
 %
-%   setGuiFonts(h, varargin)
+%   av.setGuiFonts(h, varargin)
 %
 %   handle 'userdata' data settings:
 %
@@ -129,7 +129,7 @@ for ii=1:length(hc)
         end
         set(hc(ii), 'fontweight','normal');
     end
-    setGuiFonts(hc(ii), font_uicontrol.size, font_uicontrol.weight);
+    av.setGuiFonts(hc(ii), font_uicontrol.size, font_uicontrol.weight);
 end
 
 

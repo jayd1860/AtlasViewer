@@ -81,7 +81,7 @@ if options.conflcheck
             end
             
             wspaths{kk,1} = foo;
-            if pathscompare(wspaths{kk}, pwd)
+            if av.pathscompare(wspaths{kk}, pwd)
                 wsidx = kk;
             end
             

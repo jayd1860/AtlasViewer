@@ -2,7 +2,7 @@ function [verstr, V] = version2string(V)
 
 verstr = '';
 if ~exist('V','var') || isempty(V)
-    V = getVernum();
+    V = av.getVernum();
 end
 if ischar(V)
     verstr = V;

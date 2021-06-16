@@ -64,7 +64,7 @@ end
 
 % If fname is a newly created file, then delete it now that it's served
 % it's purpose.
-if ~pathscompare(fname0,fname)
+if ~av.pathscompare(fname0,fname)
     delete(fname);
 end
 

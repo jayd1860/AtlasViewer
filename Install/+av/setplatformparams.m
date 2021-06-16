@@ -1,7 +1,7 @@
 function platform = setplatformparams()
 
 % Set the home directoty on linux and mac to full path so it can be
-% displayed in full at setup time.
+% displayed in full at av.setup time.
 if ismac() || islinux()
     currdir = pwd;
     cd ~/;
@@ -20,7 +20,7 @@ platform = struct(...
     'exenameDesktopPath','', ...
     'setup_exe',{{}}, ...
     'setup_script','', ...
-    'dirnameApp', getAppDir('isdeployed'), ...
+    'dirnameApp', av.getAppDir('isdeployed'), ...
     'mcrpath','', ...
     'iso2meshmex',{{}}, ...
     'iso2meshbin','', ...
@@ -40,9 +40,9 @@ if ismac()
     platform.exename{1} = 'AtlasViewerGUI.app';
     platform.exename{2} = 'run_AtlasViewerGUI.sh';
     platform.exenameDesktopPath = [platform.desktopPath, '/AtlasViewerGUI.command'];
-    platform.setup_exe{1} = 'setup.app';
-    platform.setup_exe{2} = 'run_setup.sh';
-    platform.setup_script = 'setup.command';
+    platform.setup_exe{1} = 'av.setup.app';
+    platform.setup_exe{2} = 'run_av.setup.sh';
+    platform.setup_script = 'av.setup.command';
     platform.createshort_script{1} = 'createShortcut.sh';
     platform.mcrpath = [dirnameHome, 'libs/mcr'];
 elseif islinux()
@@ -50,9 +50,9 @@ elseif islinux()
     platform.exename{1} = 'AtlasViewerGUI.sh';
     platform.exename{2} = 'run_AtlasViewerGUI.sh';
     platform.exenameDesktopPath = [platform.desktopPath, '/', platform.exename{1}];
-    platform.setup_exe{1} = 'setup';
-    platform.setup_exe{2} = 'run_setup.sh';
-    platform.setup_script = 'setup.sh';
+    platform.setup_exe{1} = 'av.setup';
+    platform.setup_exe{2} = 'run_av.setup.sh';
+    platform.setup_script = 'av.setup.sh';
     platform.createshort_script{1} = 'createShortcut.sh';
     platform.mcrpath = [dirnameHome, 'libs/mcr'];
 elseif ispc()
@@ -60,9 +60,9 @@ elseif ispc()
     platform.mc_exe_ext = '.exe';
     platform.exename{1} = 'AtlasViewerGUI.exe';
     platform.exenameDesktopPath = [platform.desktopPath, '/', platform.exename{1}, '.lnk'];
-    platform.setup_exe{1} = 'setup.exe';
+    platform.setup_exe{1} = 'av.setup.exe';
     platform.setup_exe{2} = 'installtemp';
-    platform.setup_script = 'setup.bat';
+    platform.setup_script = 'av.setup.bat';
     platform.createshort_script{1} = 'createShortcut.bat';
     platform.createshort_script{2} = 'createShortcut.vbs';
 end

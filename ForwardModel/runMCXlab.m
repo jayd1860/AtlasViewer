@@ -209,7 +209,7 @@ flueDet = zeros( nopt, nopt, num_wavelengths ); % matrix for fluence detected at
 
 for iWav = 1:num_wavelengths
     
-    % setup mua distribution for calculating energy absorbed
+    % av.setup mua distribution for calculating energy absorbed
     % IF WE ARE NOT SCALING BELOW, THEN THIS IS NOT NEEDED 
 %     mua = single(zeros(size(fwmodel.headvol.img)));
 %     tiss_seg_num = unique(fwmodel.headvol.img(find(fwmodel.headvol.img ~= 0)));

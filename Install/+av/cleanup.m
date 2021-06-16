@@ -1,5 +1,5 @@
 function cleanup(dirnameInstall, dirnameApp, options)
-platform = setplatformparams();
+platform = av.setplatformparams();
 
 if ~exist('dirnameInstall','var') | isempty(dirnameInstall)
     if exist('./Install','dir')
@@ -9,7 +9,7 @@ if ~exist('dirnameInstall','var') | isempty(dirnameInstall)
     end
 end
 if ~exist('dirnameApp','var') | isempty(dirnameApp)
-    dirnameApp = getAppDir();
+    dirnameApp = av.getAppDir();
 end
 if ~exist('options','var')
     options = 'end';

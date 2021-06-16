@@ -1,6 +1,6 @@
 function Buildme_AtlasViewerGUI(dirnameApp)
 
-platform = setplatformparams();
+platform = av.setplatformparams();
 
 if  ~exist('dirnameApp','var') || isempty(dirnameApp)
     dirnameApp = filesepStandard(ffpath('AtlasViewerGUI.m'));

@@ -57,7 +57,7 @@ if ~isempty(filename)
     if err
         SDgui_version(hObject);
         positionGUI(hObject, 0.20, 0.10, 0.75, 0.78);
-        setGuiFonts(hObject);        
+        av.setGuiFonts(hObject);        
         return;
     end
 elseif ~isempty(varargin)
@@ -67,7 +67,7 @@ end
 sd_file_panel_SetPathname(handles, pathname);
 SDgui_version(hObject);
 positionGUI(hObject, 0.20, 0.10, 0.75, 0.78);
-setGuiFonts(hObject);
+av.setGuiFonts(hObject);
 popupmenuSpatialUnit_Callback([], [], handles)
 radiobuttonView3D_Callback([], [], handles);
 EnableGUI(hObject);

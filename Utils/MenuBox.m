@@ -163,7 +163,7 @@ end
 
 % Need to make sure position data is saved in pixel units at end of function
 % to as these are the units used to reposition GUI later if needed
-setGuiFonts(hf);
+av.setGuiFonts(hf);
 p = guiOutsideScreenBorders(hf);
 
 % Change units temporarily to normalized to apply the repositiong because 

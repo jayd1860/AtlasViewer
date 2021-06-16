@@ -1,14 +1,14 @@
 function [title, vernum] = MainGUIVersion(varargin)
 %
 % Syntax:
-%    [verstr, vernum, title] = MainGUIVersion()
-%    [verstr, vernum, title] = MainGUIVersion(hObject)
-%    [verstr, vernum, title] = MainGUIVersion(hObject, option)
-%    [verstr, vernum, title] = MainGUIVersion(option)
+%    [verstr, vernum, title] = av.MainGUIVersion()
+%    [verstr, vernum, title] = av.MainGUIVersion(hObject)
+%    [verstr, vernum, title] = av.MainGUIVersion(hObject, option)
+%    [verstr, vernum, title] = av.MainGUIVersion(option)
 % 
 % Example:
 %
-%    [verstr, vernum, title] = MainGUIVersion('exclpath')
+%    [verstr, vernum, title] = av.MainGUIVersion('exclpath')
 %
 
 if nargin==0
